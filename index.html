@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Video Gallery</h1>
+
+  <div class="video-container">
+    <div class="video"><video src="img/1.mp4" muted ></video></div>
+    <div class="video"><video src="img/1.1.mp4" muted ></video></div>
+    <div class="video"><video src="img/2.mp4" muted ></video></div>
+    <div class="video"><video src="img/3.mp4" muted ></video></div>
+    <div class="video"><video src="img/4.mp4" muted ></video></div>
+    <div class="video"><video src="img/5.mp4" muted ></video></div>
+    <div class="video"><video src="img/6.mp4" muted ></video></div>
+    <div class="video"><video src="img/7.mp4" muted ></video></div>
+    <div class="video"><video src="img/8.mp4" muted ></video></div>
+    <div class="video"><video src="img/9.mp4" muted ></video></div>
+    <div class="video"><video src="img/10.mp4" muted ></video></div>
+    <div class="video"><video src="img/11.mp4" muted ></video></div>
+
+    <div class="video"><video src="img/14.mp4" muted ></video></div>
+  </div>
+  <div class="popup-video">
+    <span>&times;</span>
+    <video src="img/1.mp4" muted autoplay controls></video>
+  </div>
+
+</div>
+
+<script>
+
+  document.querySelectorAll('.video-container video').forEach(vid =>{
+    vid.onclick = () =>{
+      document.querySelector('.popup-video').style.display = 'block';
+      document.querySelector('.popup-video video').src = vid.getAttribute('src');
+    }
+  })
+
+  document.querySelector('.popup-video span').onclick = () => {
+    document.querySelector('.popup-video').style.display = 'none';
+  }
+</script>
+</body>
+
+</html>
