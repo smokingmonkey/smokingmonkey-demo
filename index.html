@@ -25,41 +25,85 @@
 <body>
 
 <div class="container">
-  <h1>Andy Esteban Serna Ochoa - Dev Reel</h1>
-  <h2>(Website in progress)</h2>
+
+  <h1>HI, ANDY HERE</h1>
+
+<!--  <h2>(Website in progress)</h2>-->
+
 
   <div class="video-container">
-    <div class="video"><video src="img/1.mp4" muted ></video></div>
-    <div class="video"><video src="img/1.1.mp4" muted ></video></div>
-    
-    <div class="video"><video src="img/15.mp4" muted ></video></div>
-    
-    <div class="video"><video src="img/2.mp4" muted ></video></div>
-    <div class="video"><video src="img/3.mp4" muted ></video></div>
-    <div class="video"><video src="img/4.mp4" muted ></video></div>
-    <div class="video"><video src="img/5.mp4" muted ></video></div>
-    
-    <div class="video"><video src="img/0.1.mp4" muted ></video></div>
-    
-    <div class="video"><video src="img/0.3.mp4" muted ></video></div>
-    <div class="video"><video src="img/0.4.mp4" muted ></video></div>
+    <div class="video">
+      <video src="img/3.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/4.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/7.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/15.mp4" muted></video>
+    </div>
 
-    
-    
-    <div class="video"><video src="img/0.2.mp4" muted ></video></div>
-    <div class="video"><video src="img/20.mp4" muted ></video></div>    
-    
-    <div class="video"><video src="img/6.mp4" muted ></video></div>
-    <div class="video"><video src="img/7.mp4" muted ></video></div>
-    <div class="video"><video src="img/8.mp4" muted ></video></div>
-    <div class="video"><video src="img/9.mp4" muted ></video></div>
-    <div class="video"><video src="img/10.mp4" muted ></video></div>
-    <div class="video"><video src="img/11.mp4" muted ></video></div>
-    <div class="video"><video src="img/14.mp4" muted ></video></div>
-    
-    <div class="video"><video src="img/16.mp4" muted ></video></div>
-    <div class="video"><video src="img/17.mp4" muted ></video></div>
+
+    <div class="video">
+      <video src="img/1.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/1.1.mp4" muted></video>
+    </div>
+
+
+
+    <div class="video">
+      <video src="img/2.mp4" muted></video>
+    </div>
+
+    <div class="video">
+      <video src="img/5.mp4" muted></video>
+    </div>
+
+    <div class="video">
+      <video src="img/0.1.mp4" muted></video>
+    </div>
+
+    <div class="video">
+      <video src="img/0.3.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/0.4.mp4" muted></video>
+    </div>
+
+
+    <div class="video">
+      <video src="img/0.2.mp4" muted></video>
+    </div>
+
+
+    <div class="video">
+      <video src="img/6.mp4" muted></video>
+    </div>
+
+    <div class="video">
+      <video src="img/8.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/9.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/10.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/11.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/14.mp4" muted></video>
+    </div>
+    <div class="video">
+      <video src="img/17.mp4" muted></video>
+    </div>
   </div>
+
   <div class="popup-video">
     <span>&times;</span>
     <video src="img/1.mp4" muted autoplay controls></video>
@@ -69,16 +113,29 @@
 
 <script>
 
-  document.querySelectorAll('.video-container video').forEach(vid =>{
-    vid.onclick = () =>{
+  document.querySelectorAll('.video-container video').forEach(vid => {
+    vid.onclick = () => {
       document.querySelector('.popup-video').style.display = 'block';
       document.querySelector('.popup-video video').src = vid.getAttribute('src');
     }
   })
 
-  document.querySelector('.popup-video span').onclick = () => {
+  document.querySelector('.popup-video span ').onclick = () => {
     document.querySelector('.popup-video').style.display = 'none';
   }
+
+  document.querySelector('.popup-video').onclick = () => {
+    document.querySelector('.popup-video').style.display = 'none';
+  }
+
+  // window.addEventListener('load', function() {
+  //   var video = document.getElementById('video');
+  //   video.addEventListener('loadedmetadata', function() {
+  //     var aspectRatio = video.videoWidth / video.videoHeight;
+  //     video.style.aspectRatio = aspectRatio;
+  //   });
+  // });
+
 </script>
 </body>
 
